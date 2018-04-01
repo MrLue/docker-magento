@@ -51,7 +51,7 @@ If you are using a Mac, it is strongly recommended for you to apply [these perfo
 ```
 mkdir magento2 && cd $_
 git init
-git remote add origin git@github.com:markoshust/docker-magento.git
+git remote add origin git@github.com:lcailleux/docker-magento.git
 git fetch origin
 git checkout origin/master -- compose/magento-2
 mv compose/magento-2/* .
@@ -78,9 +78,9 @@ git init
 ```
 mkdir magento2 && cd $_
 git init
-git remote add origin git@github.com:markoshust/docker-magento.git
+git remote add origin git@github.com:lcailleux/docker-magento.git
 git fetch origin
-git checkout origin/master -- compose/magento-2-windows
+git checkout origin/master -- compose/magento-2-windows images
 mv compose/magento-2-windows/* .
 rm -rf compose .git
 git init
