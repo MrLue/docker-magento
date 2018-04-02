@@ -26,15 +26,17 @@ services:
       - db
     volumes: *appvolumes
 
-  cron:
-    image: markoshust/magento-php:7.1-fpm
-    build: ./images/php/7.1-windows/
-    user: root
-    command: /usr/local/bin/cronstart
-    tty: true
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
     links:
       - db
-    volumes: *appvolumes
+    environment:
+      - PMA_ARBITRARY=1
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
 
   db:
     image: percona:5.7
@@ -48,3 +50,4 @@ volumes:
   dbdata:
   sockdata:
   appdata:
+  
