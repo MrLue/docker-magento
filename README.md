@@ -90,13 +90,13 @@ git init
 
 2. Download the Magento source code to the `src` folder with: `./bin/download 2.2.2`. Note that the default untar command is quite slow. If you want to speed that up install [7-Zip](http://www.7-zip.org/) and add it to your PATH. The script will automatically use 7-Zip if it is available.
 
-3. Copy magento into the docker container with `./bin/copymagento`. This is needed because of permission restrictions of shared data in Windows (see [Troubleshooting Docker](https://docs.docker.com/docker-for-windows/troubleshoot/#permissions-errors-on-data-directories-for-shared-volumes)). The folders `app/code`, `app/design` and `app/i18n` will however be shared with Windows for ease of development. For these folders the default permission 755 works just fine.
+3. Copy magento into the docker container with `./bin/copymagento.ps1`. This is needed because of permission restrictions of shared data in Windows (see [Troubleshooting Docker](https://docs.docker.com/docker-for-windows/troubleshoot/#permissions-errors-on-data-directories-for-shared-volumes)). The folders `app/code`, `app/design` and `app/i18n` will however be shared with Windows for ease of development. For these folders the default permission 755 works just fine.
 
 4. Add an entry to `C:\Windows\System32\drivers\etc\hosts` with your custom domain: `127.0.0.1 magento2.test` (assuming the domain  you want to setup is `magento2.test`). Be sure to use a `.test` tld, as `.localhost` and `.dev` will present issues with domain resolution.
 
-5. Start your Docker containers with: `./bin/start`.
+5. Start your Docker containers with: `./bin/start.ps1`.
 
-6. Run Magento's setup install process with the command: `./bin/setup`. Feel free to edit this file to your liking; at the very least you will probably need to update the `base-url` value to the domain you setup in step 6. Also, be sure to setup [Composer Authentication](https://github.com/markoshust/docker-magento#composer-authentication) before initiating the setup script.
+6. Run Magento's setup install process with the command: `./bin/setup.ps1`. Feel free to edit this file to your liking; at the very least you will probably need to update the `base-url` value to the domain you setup in step 6. Also, be sure to setup [Composer Authentication](https://github.com/markoshust/docker-magento#composer-authentication) before initiating the setup script.
 
 7. You may now access your site at `http://magento2.test` (or whatever domain you setup).
 
