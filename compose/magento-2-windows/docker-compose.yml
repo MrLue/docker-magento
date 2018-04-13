@@ -16,6 +16,8 @@ services:
       - ./src/app/code:/var/www/html/app/code:delegated
       - ./src/app/design:/var/www/html/app/design:delegated
       - ./src/app/i18n:/var/www/html/app/i18n:delegated
+      - ./src/var:/var/www/html/var:delegated
+      - ./src/vendor:/var/www/html/vendor:delegated
       - ~/.composer:/var/www/html/var/composer_home:delegated
       - sockdata:/sock
 
