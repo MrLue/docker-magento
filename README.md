@@ -150,7 +150,7 @@ Open `PHPStorm > Preferences > Languages & Frameworks > PHP > Debug` and set Deb
 Open `PHPStorm > Preferences > Languages & Frameworks > PHP > DBGp Proxy` and set:
 
 - IDE key: `PHPSTORM`
-- Host: `10.254.254.254`
+- Host: Mac `10.254.254.254` - Windows `10.0.75.1`
 - Port: `9001`
 
 Open `PHPStorm > Preferences > Languages & Frameworks > PHP > Servers` and create a new server:
